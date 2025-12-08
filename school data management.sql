@@ -46,11 +46,12 @@ CREATE TABLE Grades (
 
 INSERT INTO Grades (student_id, course_id, grade) 
 VALUES
-    (1, 1, 'A'),
-    (1, 2, 'C'),
-    (1, 4, 'D'),
-    (1, 5, 'A'),
-    (2, 5, 'B');
+    (1, 102, 'A'),
+    (1, 101, 'C'),
+    (1, 103, 'D'),
+    (1, 104, 'A'),
+    (2, 105, 'B');
+
 
 
 
