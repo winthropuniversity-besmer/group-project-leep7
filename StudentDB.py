@@ -7,7 +7,7 @@ mydb = mysql.connector.connect(
     database="sample"
 )
 
-mycursor = mydb.cursor()
+mycursor = mydb.cursor() #these can be inserted into the class StudentDB
 sql_create = "INSERT INTO students (first_name, last_name, email, phone_number) VALUES (%s, %s, %s, %s)"
 sql_create = "INSERT INTO courses (first_name, last_name, email, phone_number) VALUES (%s, %s, %s, %s)"
 sql_create = "INSERT INTO grades (first_name, last_name, email, phone_number) VALUES (%s, %s, %s, %s)"
@@ -17,11 +17,12 @@ sql_delete = "DELETE FROM students where id = %s"
 
 
 class StudentDB:
+    
 def add students(self,first_name, last_name, email,):
 def add courses(self, course_id, course_name):
 def add grades(self, grade_id, student_id, course_id, grade);
-def select students(); 
-def update student():
+def select students(self); 
+def update student(self, student_id):
 def update grades():
 def delete student():
 
@@ -32,9 +33,9 @@ def menu(): #shows the choices
     print("3. Add Grade")
     print("4. Update Student")
     print("5. Update Grade")
-    print("5. Select Student")
-    print("6. Delete Student")
-    print("7. Exit")
+    print("6. Select Student")
+    print("7. Delete Student")
+    print("8. Exit")
     return input("Choice: ")
 
 
@@ -78,15 +79,19 @@ def main(): #
                 input("New Grade: ")
             )
 
-        if choice == '6':
-            db.delete_student(int(input("Student ID: ")))
+         if choice == '6':
+            db.show_students()
 
         if choice == '7':
+            db.delete_student(int(input("Student ID: ")))
+
+        if choice == '8':
             print("Bye!")
             break
 
         else:
             print("Invalid choice!")
+
 
 
 
