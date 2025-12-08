@@ -20,6 +20,7 @@ class StudentDB:
 def add students(self,first_name, last_name, email,):
 def add courses(self, course_id, course_name):
 def add grades(self, grade_id, student_id, course_id, grade);
+def select students(); 
 def update student():
 def update grades():
 def delete student():
@@ -31,6 +32,7 @@ def menu(): #shows the choices
     print("3. Add Grade")
     print("4. Update Student")
     print("5. Update Grade")
+    print("5. Select Student")
     print("6. Delete Student")
     print("7. Exit")
     return input("Choice: ")
@@ -85,5 +87,6 @@ def main(): #
 
         else:
             print("Invalid choice!")
+
 
 
