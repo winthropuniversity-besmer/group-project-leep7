@@ -14,7 +14,7 @@ VALUES
     ('Jane', 'Smith', 'jane.smith@example.com', '64758574793'),
     ('Candice', 'Jones' 'candice.jones@example.com', '3647363728')
     ('Art', 'Donald', 'art.donald@example.com', '3746378498')
-    ('Mike', 'Johnson', 'mike.johnson@eample.com', '3647584637');
+    ('Mike', 'Johnson', 'mike.johnson@eXample.com', '3647584637');
 
 CREATE TABLE Courses (
     course_id INT NOT NULL AUTO_INCREMENT,
@@ -51,3 +51,4 @@ VALUES
     (1, 4, 'D'),
     (1, 5, 'A'),
     (2, 5, 'B');
+
