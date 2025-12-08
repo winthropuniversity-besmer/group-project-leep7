@@ -1,1 +1,1 @@
-#Presice inserted the sql db and some python 
+#Presice inserted the sql db and worked on insert, update, and delete.
