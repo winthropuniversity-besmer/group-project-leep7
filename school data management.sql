@@ -11,7 +11,10 @@ CREATE TABLE Students (
 INSERT INTO Students (first_name, last_name, email, phone_number)
 VALUES 
     ('Johnny', 'Grant', 'johnny.grant@example.com', '7575746746'),
-    ('Jane', 'Smith', 'jane.smith@example.com', '64758574793');
+    ('Jane', 'Smith', 'jane.smith@example.com', '64758574793'),
+    ('Candice', 'Jones' 'candice.jones@example.com', '3647363728')
+    ('Art', 'Donald', 'art.donald@example.com', '3746378498')
+    ('Mike', 'Johnson', 'mike.johnson@eample.com', '3647584637');
 
 CREATE TABLE Courses (
     course_id INT NOT NULL AUTO_INCREMENT,
@@ -22,7 +25,10 @@ CREATE TABLE Courses (
 INSERT INTO Courses (course_id, course_name)
 VALUES
     ('101','Introduction to Mathematics'),
-    ('102','Introduction to Science');
+    ('102','Introduction to Science'),
+    ('103', 'Accounting'),
+    ('104', 'Database Processing'),
+    ('105', 'Biology');
 
 CREATE TABLE Grades (
     grade_id INT NOT NULL AUTO_INCREMENT,
@@ -41,4 +47,7 @@ CREATE TABLE Grades (
 INSERT INTO Grades (student_id, course_id, grade) 
 VALUES
     (1, 1, 'A'),
-    (2, 2, 'B');
+    (1, 2, 'C'),
+    (1, 4, 'D'),
+    (1, 5, 'A'),
+    (2, 5, 'B');
