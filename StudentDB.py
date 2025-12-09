@@ -3,8 +3,8 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="deltona.birdnest.org",
     user="my.leep7",
-    password="",
-    database="sample"
+    password="547%9sb2i",
+    database="my_leep7_StudentDB"
 )
 
 mycursor = mydb.cursor() #these can be inserted into the class StudentDB
@@ -91,6 +91,7 @@ def main(): #
 
         else:
             print("Invalid choice!")
+
 
 
 
