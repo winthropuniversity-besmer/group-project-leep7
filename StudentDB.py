@@ -11,25 +11,54 @@ mycursor = mydb.cursor() #these can be inserted into the class StudentDB
 # Insert new student, course and grades. Updating one of the students, switching student 5's course id, and switching course name. 3 inserts and 3 updates
 sql_createstudents = "INSERT INTO Students (student_id, first_name, last_name, email, phone_number) VALUES (6, Elena, Gilbert, salvatored@winthrop.edu, 4432822612)"
 sql_createcourses = "INSERT INTO Courses (course_id, course_name) VALUES (106, 'Culinary Arts')"
-sql_creategrades = "INSERT INTO Grades (student_id, course_id, grade) VALUES (6, 106, 'B')"
+sql_creategrades = "INSERT INTO Grades (student_id, course_id, grade) VALUES ( %s, %s, %s)"
 sql_editstudents = "UPDATE Students SET last_name = 'Salvatore', email = 'salvatorej@winthrop.edu' WHERE student_id = 2"
-sql_editgrades = "UPDATE Grades SET course_id = 102 WHERE student_id = 5"
-sql_editcourses = "UPDATE Courses SET course_name = 'Fine Arts' WHERE course_id = 105"
-sql_selectstudent = "SELECT * FROM students" #Commands for cursor to execute to select from the 3 tables
-sql_selectcourse = "SELECT * FROM courses"
-sql_selectgrade = "SELECT * FROM grades"
-sql_delete = "DELETE FROM Students where id = %s"
+sql_editgrades = "UPDATE Grades SET course_id = %s WHERE student_id = %s"
+sql_editcourses = "UPDATE Courses SET course_name = %s WHERE course_id = %s"
+sql_selectstudent = "SELECT * FROM students WHERE student_id = %s" #Commands for cursor to execute to select from the 3 tables
+sql_selectcourse = "SELECT * FROM courses WHERE course_id = %s"
+sql_selectgrade = "SELECT * FROM grades WHERE grade_id = %s"
+sql_delete = "DELETE FROM Students WHERE student_id = %s"
 
 
 class StudentDB:
     
-def add students(self,first_name, last_name, email,):
+def add students(self,first_name, last_name, email,phone_number):
+    my_cursor.execute(sql_createstudents, (first_name, last_name, email, phone_number))
+    mydb.commit()
+    input("Press Enter to continue: " )
+
 def add courses(self, course_id, course_name):
-def add grades(self, grade_id, student_id, course_id, grade);
+  my_cursor.execute(sql_createcourses, (course_id, course_name)
+    mydb.commit()
+    input("Press Enter to continue: " )
+
+def add grades(self, student_id, course_id, grade);
+  my_cursor.execute(sql_creategrades, (student_id, course_id, grade))
+    mydb.commit()
+    input("Press Enter to continue: " )
+
 def select students(self); 
-def update student(self, student_id):
-def update grades():
-def delete student():
+  my_cursor.execute("SELECT * FROM students"))
+  output = mycursor.fetchall()
+  for row in output:
+      print(row)
+    input("Press Enter to continue: " )
+
+def update student(self, student_id, new email, new_phone):
+  my_cursor.execute(sql_editstudents, (new_email, new_phone, student_id))
+    mydb.commit()
+    input("Press Enter to continue: " )
+
+def update grades(self, grade_id, new_grade):
+     my_cursor.execute(sql_editgrades, (new_grade, grade_id))
+    mydb.commit()
+    input("Press Enter to continue: " )
+
+def delete student(self, student_id):
+    my_cursor.execute(sql_delete, (student_id))
+    mydb.commit()
+    input("Press Enter to continue: " )
 
    
 def menu(): #shows the choices 
@@ -117,6 +146,7 @@ def main():
                 print("Invalid choice!")
 
 main()
+
 
 
 
