@@ -8,7 +8,7 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor() #these can be inserted into the class StudentDB
-
+# Insert new student, course and grades. Updating one of the students, switching student 5's course id, and switching course name. 3 inserts and 3 updates
 sql_createstudents = "INSERT INTO Students (student_id, first_name, last_name, email, phone_number) VALUES (6, Elena, Gilbert, salvatored@winthrop.edu, 4432822612)"
 sql_createcourses = "INSERT INTO Courses (course_id, course_name) VALUES (106, 'Culinary Arts')"
 sql_creategrades = "INSERT INTO Grades (student_id, course_id, grade) VALUES (6, 106, 'B')"
@@ -117,6 +117,7 @@ def main():
                 print("Invalid choice!")
 
 main()
+
 
 
 
