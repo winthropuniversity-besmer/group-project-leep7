@@ -8,13 +8,13 @@ CREATE TABLE Students (
     PRIMARY KEY (student_id)
 );
 
-INSERT INTO Students (first_name, last_name, email, phone_number)
+INSERT INTO Students (student_id, first_name, last_name, email, phone_number)
 VALUES 
-    ('Johnny', 'Grant', 'johnny.grant@example.com', '7575746746'),
-    ('Jane', 'Smith', 'jane.smith@example.com', '64758574793'),
-    ('Candice', 'Jones', 'candice.jones@example.com', '3647363728'),
-    ('Art', 'Donald', 'art.donald@example.com', '3746378498'),
-    ('Mike', 'Johnson', 'mike.johnson@example.com', '3647584637');
+    (1, 'Jonathan', 'Gilbert', 'jonathan.gilbert@winthrop.edu', '7575746746'),
+    (2, 'Jane', 'Smith', 'jane.smith@winthrop.edu', '64758574793'),
+    (3, 'Candice', 'Jones', 'candice.jones@winthrop.edu', '3647363728'),
+    (4, 'Ronald', 'McDonald', 'ronald.mcdonald@winthrop.edu', '3746378498'),
+    (5, 'Mike', 'Johnson', 'mike.johnson@winthrop.edu', '3647584637');
 
 CREATE TABLE Courses (
     course_id INT NOT NULL AUTO_INCREMENT,
@@ -47,10 +47,13 @@ CREATE TABLE Grades (
 INSERT INTO Grades (student_id, course_id, grade) 
 VALUES
     (1, 102, 'A'),
-    (1, 101, 'C'),
+    (2, 101, 'C'),
+    (3, 102, 'A');
     (1, 103, 'D'),
-    (1, 104, 'A'),
-    (2, 105, 'B');
+    (3, 104, 'A'),
+    (4, 105, 'B');
+    (5, 101, 'C');
+
 
 
 
