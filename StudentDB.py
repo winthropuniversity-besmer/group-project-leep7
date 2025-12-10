@@ -12,13 +12,13 @@ mycursor = mydb.cursor() #these can be inserted into the class StudentDB
 sql_createstudents = "INSERT INTO Students (student_id, first_name, last_name, email, phone_number) VALUES (6, Elena, Gilbert, salvatored@winthrop.edu, 4432822612)"
 sql_createcourses = "INSERT INTO Courses (course_id, course_name) VALUES (106, 'Culinary Arts')"
 sql_creategrades = "INSERT INTO Grades (student_id, course_id, grade) VALUES (6, 106, 'B')"
-sql_editstudents = "UPDATE Students SET name = %s, age = %s WHERE id = %s"
-sql_editgrades = "UPDATE Grades SET name = %s, age = %s WHERE id = %s"
-sql_editcourses = "UPDATE Courses SET name = %s, age = %s WHERE id = %s"
+sql_editstudents = "UPDATE Students SET last_name = 'Salvatore', email = 'salvatorej@winthrop.edu' WHERE student_id = 2"
+sql_editgrades = "UPDATE Grades SET course_id = 102 WHERE student_id = 5"
+sql_editcourses = "UPDATE Courses SET course_name = 'Fine Arts' WHERE course_id = 105"
 sql_selectstudent = "SELECT * FROM students" #Commands for cursor to execute to select from the 3 tables
 sql_selectcourse = "SELECT * FROM courses"
 sql_selectgrade = "SELECT * FROM grades"
-sql_delete = "DELETE FROM students where id = %s"
+sql_delete = "DELETE FROM Students where id = %s"
 
 
 class StudentDB:
@@ -117,6 +117,7 @@ def main():
                 print("Invalid choice!")
 
 main()
+
 
 
 
