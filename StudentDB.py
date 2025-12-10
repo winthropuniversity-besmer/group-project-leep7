@@ -9,9 +9,9 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor() #these can be inserted into the class StudentDB
 
-sql_createStudents = "INSERT INTO Students (first_name, last_name, email, phone_number) VALUES (%s, %s, %s, %s)"
-sql_createCourses = "INSERT INTO Courses (first_name, last_name, email, phone_number) VALUES (%s, %s, %s, %s)"
-sql_createGrades = "INSERT INTO Grades (first_name, last_name, email, phone_number) VALUES (%s, %s, %s, %s)"
+sql_createStudents = "INSERT INTO Students (first_name, last_name, email, phone_number) VALUES (Elena, Gilber, salvatored@winthrop.edu, 4432822612)"
+sql_createCourses = "INSERT INTO Courses (first_name, last_name, email, phone_number) VALUES (Bonnie, Blue, salvatored@winthrop.edu, 4432843341)"
+sql_createGrades = "INSERT INTO Grades (first_name, last_name, email, phone_number) VALUES (Damon, Salvatore, salvatored@winthrop.edu, 4438938765)"
 sql_editStudents = "UPDATEGtudents SET name = %s, age = %s WHERE id = %s"
 sql_editGrades = "UPDATE Grades SET name = %s, age = %s WHERE id = %s"
 sql_editCourses = "UPDATE Courses SET name = %s, age = %s WHERE id = %s"
@@ -117,6 +117,7 @@ def main():
                 print("Invalid choice!")
 
 main()
+
 
 
 
