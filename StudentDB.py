@@ -9,12 +9,12 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor() #these can be inserted into the class StudentDB
 
-sql_createstudents = "INSERT INTO students (first_name, last_name, email, phone_number) VALUES (Elena, Gilbert, salvatored@winthrop.edu, 4432822612)"
-sql_createcourses = "INSERT INTO courses (first_name, last_name, email, phone_number) VALUES (Bonnie, Blue, salvatored@winthrop.edu, 4432843341)"
-sql_creategrades = "INSERT INTO grades (first_name, last_name, email, phone_number) VALUES (Damon, Salvatore, salvatored@winthrop.edu, 4438938765)"
-sql_editstudents = "UPDATE students SET name = %s, age = %s WHERE id = %s"
-sql_editgrades = "UPDATE grades SET name = %s, age = %s WHERE id = %s"
-sql_editcourses = "UPDATE courses SET name = %s, age = %s WHERE id = %s"
+sql_createstudents = "INSERT INTO Students (student_id, first_name, last_name, email, phone_number) VALUES (6, Elena, Gilbert, salvatored@winthrop.edu, 4432822612)"
+sql_createcourses = "INSERT INTO Courses (course_id, course_name) VALUES (106, 'Culinary Arts')"
+sql_creategrades = "INSERT INTO Grades (student_id, course_id, grade) VALUES (6, 106, 'B')"
+sql_editstudents = "UPDATE Students SET name = %s, age = %s WHERE id = %s"
+sql_editgrades = "UPDATE Grades SET name = %s, age = %s WHERE id = %s"
+sql_editcourses = "UPDATE Courses SET name = %s, age = %s WHERE id = %s"
 sql_selectstudent = "SELECT * FROM students" #Commands for cursor to execute to select from the 3 tables
 sql_selectcourse = "SELECT * FROM courses"
 sql_selectgrade = "SELECT * FROM grades"
@@ -117,6 +117,7 @@ def main():
                 print("Invalid choice!")
 
 main()
+
 
 
 
