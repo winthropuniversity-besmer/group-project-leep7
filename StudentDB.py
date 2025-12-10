@@ -23,42 +23,42 @@ sql_delete = "DELETE FROM Students WHERE student_id = %s"
 
 class StudentDB:
     
-def add students(self,first_name, last_name, email,phone_number):
-    my_cursor.execute(sql_createstudents, (first_name, last_name, email, phone_number))
-    mydb.commit()
-    input("Press Enter to continue: " )
-
-def add courses(self, course_id, course_name):
-  my_cursor.execute(sql_createcourses, (course_id, course_name)
-    mydb.commit()
-    input("Press Enter to continue: " )
-
-def add grades(self, student_id, course_id, grade);
-  my_cursor.execute(sql_creategrades, (student_id, course_id, grade))
-    mydb.commit()
-    input("Press Enter to continue: " )
-
-def select students(self); 
-  my_cursor.execute("SELECT * FROM students"))
-  output = mycursor.fetchall()
-  for row in output:
-      print(row)
-    input("Press Enter to continue: " )
-
-def update student(self, student_id, new email, new_phone):
-  my_cursor.execute(sql_editstudents, (new_email, new_phone, student_id))
-    mydb.commit()
-    input("Press Enter to continue: " )
-
-def update grades(self, grade_id, new_grade):
-     my_cursor.execute(sql_editgrades, (new_grade, grade_id))
-    mydb.commit()
-    input("Press Enter to continue: " )
-
-def delete student(self, student_id):
-    my_cursor.execute(sql_delete, (student_id))
-    mydb.commit()
-    input("Press Enter to continue: " )
+ def add_students(self, first_name, last_name, email, phone_number):
+        mycursor.execute(sql_createstudents, (first_name, last_name, email, phone_number))
+        mydb.commit()
+        input("Press Enter to continue")
+    
+    def add_courses(self, course_id, course_name):
+        mycursor.execute(sql_createcourses, (course_id, course_name))
+        mydb.commit()
+        input("Press Enter to continue")
+    
+    def add_grades(self, student_id, course_id, grade):
+        mycursor.execute(sql_creategrades, (student_id, course_id, grade))
+        mydb.commit()
+        input("Press Enter to continue")
+    
+    def select_students(self):
+        mycursor.execute("SELECT * FROM students")
+        output = mycursor.fetchall()
+        for row in output:
+            print(row)
+        input("Press Enter to continue")
+    
+    def update_student(self, student_id, new_email, new_phone):
+        mycursor.execute(sql_editstudents, (new_email, new_phone, student_id))
+        mydb.commit()
+        input("Press Enter to continue")
+    
+    def update_grade(self, grade_id, new_grade):
+        mycursor.execute(sql_editgrades, (new_grade, grade_id))
+        mydb.commit()
+        input("Press Enter to continue")
+    
+    def delete_student(self, student_id):
+        mycursor.execute(sql_delete, (student_id,))
+        mydb.commit()
+        input("Press Enter to continue")
 
    
 def menu(): #shows the choices 
@@ -146,6 +146,7 @@ def main():
                 print("Invalid choice!")
 
 main()
+
 
 
 
